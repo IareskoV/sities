@@ -26,7 +26,7 @@ export class CityComponent implements OnInit {
         let temp = ans.results.bindings.map(item=>{
           return{
             image: item.image.value,
-            item: item.item.value,
+            item: item.item.value.replace('http://dbpedia.org/resource/',''),
             name: item.name.value,
             text: item.text.value
           }

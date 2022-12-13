@@ -1,6 +1,6 @@
 <p>city works!</p>
 <ul>
-    <li [routerLink]="[site.name]" *ngFor="let site of sites">
+    <li [routerLink]="['/site',site.item]" *ngFor="let site of sites">
         <img src="{{site.image}}" alt="">
         <p> {{site.name}}</p>
     </li>

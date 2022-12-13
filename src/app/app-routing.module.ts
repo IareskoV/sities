@@ -12,12 +12,12 @@ const routes: Routes = [
   {
     path:":id",
     component:CityComponent,
-    children: [
-      {path:':id',
-      component:CiteComponent
-      }
-    ]
+    },
+  {
+    path:'site/:id',
+    component:CiteComponent
   }
+
 ];
 
 @NgModule({
