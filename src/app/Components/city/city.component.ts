@@ -23,6 +23,7 @@ export class CityComponent implements OnInit {
 
       this.http.get<answer>("http://127.0.0.1:5000/city",{params: {name:params['id']}}).subscribe(ans=>{
         console.log(ans.results.bindings)
+        if(ans.results.bindings.length){
         let temp = ans.results.bindings.map(item=>{
           return{
             image: item.image.value,
@@ -33,6 +34,15 @@ export class CityComponent implements OnInit {
         })
         this.sites = temp
         console.log(temp)
+      }
+      else{
+        this.sites=[{
+          image:'',
+          item:"",
+          text:"",
+          name:"Sory we cannot find historical buildings of this place",
+        }]
+      }
 
       })
     });

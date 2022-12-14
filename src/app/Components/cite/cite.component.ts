@@ -16,9 +16,10 @@ export class CiteComponent implements OnInit {
     this.routeSub = this.route.params.subscribe(params => {
 
       this.http.get<string[]>("http://127.0.0.1:5000/cite",{params: {name:params['id']}}).subscribe(ans=>{
-        console.log(ans)
+
         this.title = ans[0]
         this.text = ans[1]
+
 
       })
     });

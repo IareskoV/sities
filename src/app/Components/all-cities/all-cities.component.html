@@ -1,6 +1,6 @@
-<p>all-cities works!</p>
-<ul>
-    <li  [routerLink]="['/',item]" *ngFor="let item of sities">
-        {{item}}
+
+<ul  class="cities">
+    <li itemscope itemtype="https://schema.org/City"  [routerLink]="['/',item]" *ngFor="let item of sities">
+        <span itemprop="name" >{{item}}</span>
     </li>
 </ul>

@@ -1,8 +1,8 @@
-<p>city works!</p>
-<ul>
-    <li [routerLink]="['/site',site.item]" *ngFor="let site of sites">
-        <img src="{{site.image}}" alt="">
-        <p> {{site.name}}</p>
-    </li>
-</ul>
+
+<div  class="cites">
+    <div  itemscope itemtype="https://schema.org/LandmarksOrHistoricalBuildings" [attr.identifier] = "site.item" class="cite" [routerLink]="['/site',site.item]" *ngFor="let site of sites">
+        <img itemprop="image" src="{{site.image}}" alt="">
+        <p itemprop="name"> {{site.name}}</p>
+    </div>
+</div>
 <router-outlet  ></router-outlet>
