@@ -1,0 +1,31 @@
+@prefix ns1: <http://example.com/ontology/> .
+@prefix ns2: <http://xmlns.com/foaf/0.1/> .
+
+<http://example.com/Cade> a ns2:Person ;
+    ns1:address "1516 Henry Street, Barkley, California 94709, USA" ;
+    ns1:degree "Bachelor of Biology in Californean University, 2011" ;
+    ns1:travel "Canada",
+        "France" ;
+    ns2:gender "male" ;
+    ns2:givenName "Cade" ;
+    ns2:interest "Birds",
+        "Ecology",
+        "Environment",
+        "Photography",
+        "Travel" .
+
+<http://example.com/Emma> a ns2:Person ;
+    ns1:address "Carrer de la Guardia Civil 20, 46020 Valencia, Spain" ;
+    ns1:degree "Master of Chemics in Valencian University, 2015" ;
+    ns1:travel "Denmark",
+        "France",
+        "Germany",
+        "Italy",
+        "Portugal",
+        "Sweden" ;
+    ns2:gender "female" ;
+    ns2:givenName "Emma" ;
+    ns2:interest "Biking",
+        "Music",
+        "Travel" .
+
